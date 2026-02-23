@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Micah Evans | Homepage</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
+    <header id="main-header">
         <h1>About Me</h1>
         <nav>
             <a href="index.html">Home</a> |
@@ -15,48 +16,43 @@
         </nav>
     </header>
 
-    <article>
-        <header>
-        <h2>Bugatti Chiron</h2>
-    <picture>
-      <source srcset="Media/Bugatti_small.jpg" media="(max-width: 1400px)">
-    <source srcset="Media/Bugatti_large.jpg" media="(min-width: 1401px)">
-    <img src="Media/Bugatti_large.jpg" alt="Bugatti Chiron"> 
-    </picture>
-
-        <h3>A picture I took of a Bugatti Chiron</h3>
-        </header> 
-
-
-
-<main>
-    <article>
+    <main>
+        <article>
             <header>
-                <h2>Hello and welcome</h2>
-            </header>
-        <section>
-            <header>
-                <h2>About Micah Evans</h2>
-            </header>
-            <p>My name is Micah Evans, and I am a student at the university of kentucky in ICT 420</p>
-        </section>
-        <section>
-            <header>
-                <h2>Purpose of this website</h2>
-                <ul>
-                    <li>Share some information about myself</li>
-                    <li>Develpope my HTML coding skills</li>
-                    <li>Learn more about the semantic Web</li>
-                </ul>
-            </header>
-        </section>
-        <aside>
-            <header>
-                <h2>Notes</h2>
-                <p>This website is created using HTML5</p>
-            </header>
-        </aside> 
-    </article>
-</main>
+                <h2 class="section-title">Bugatti Chiron</h2>
+                <picture>
+                    <source srcset="Media/Bugatti_small.jpg" media="(max-width: 1400px)">
+                    <source srcset="Media/Bugatti_large.jpg" media="(min-width: 1401px)">
+                    <img src="Media/Bugatti_large.jpg" alt="Bugatti Chiron"> 
+                </picture>
+                <h3>A picture I took of a Bugatti Chiron</h3>
+            </header> 
+
+            <section>
+                <header>
+                    <h2 class="section-title">Hello and welcome</h2>
+                </header>
+                <p>My name is Micah Evans, and I am a student at the University of Kentucky in ICT 420</p>
+            </section>
+
+            <section>
+                <header>
+                    <h2 class="section-title">Purpose of this website</h2>
+                    <ul>
+                        <li>Share some information about myself</li>
+                        <li>Develop my HTML coding skills</li>
+                        <li>Learn more about the semantic Web</li>
+                    </ul>
+                </header>
+            </section>
+
+            <aside id="meta-info">
+                <header>
+                    <h2>Notes</h2>
+                    <p>This website is created using HTML5</p>
+                </header>
+            </aside> 
+        </article>
+    </main>
 </body>
 </html>

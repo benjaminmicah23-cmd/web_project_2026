@@ -1,0 +1,36 @@
+
+body {
+    background-color: #f4f4f4; 
+    color: #333333;            
+    font-size: 1.1rem;         
+}
+
+
+#main-header {
+    background-color: #003366; 
+    color: #ffffff;            
+}
+
+
+.section-title {
+    color: #d14900;            
+    font-size: 1.5rem;         
+}
+
+
+nav a {
+    color: #ffdd00;            
+    font-weight: bold;
+}
+
+
+img {
+    width: 100%;               
+    max-width: 800px;
+}
+
+
+#meta-info {
+    background-color: #e0e0e0;
+    font-size: 0.9rem;         
+}
