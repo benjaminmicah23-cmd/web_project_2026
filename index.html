@@ -2,57 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The personal portfolio and automotive gallery of Micah Evans, ICT student at UK.">
     <title>Micah Evans | Homepage</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header id="main-header">
-        <h1>About Me</h1>
+        <h1>Micah Evans' Portfolio</h1>
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">More Info</a> |
-            <a href="projects.html">Projects</a> |
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">More Info</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#meta-info">Jump to Notes</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
         <article>
-            <header>
+            <section id="hero">
                 <h2 class="section-title">Bugatti Chiron</h2>
-                <picture>
-                    <source srcset="Media/Bugatti_small.jpg" media="(max-width: 1400px)">
-                    <source srcset="Media/Bugatti_large.jpg" media="(min-width: 1401px)">
-                    <img src="Media/Bugatti_large.jpg" alt="Bugatti Chiron"> 
-                </picture>
-                <h3>A picture I took of a Bugatti Chiron</h3>
-            </header> 
+                <figure>
+                    <picture>
+                        <source srcset="Media/Bugatti_small.jpg" media="(max-width: 1400px)">
+                        <img src="Media/Bugatti_large.jpg" alt="A high-performance Bugatti Chiron captured in professional lighting"> 
+                    </picture>
+                    <figcaption>A picture I took of a Bugatti Chiron.</figcaption>
+                </figure>
+            </section> 
 
-            <section>
-                <header>
-                    <h2 class="section-title">Hello and welcome</h2>
-                </header>
-                <p>My name is Micah Evans, and I am a student at the University of Kentucky in ICT 420</p>
+            <section id="introduction">
+                <h2 class="section-title">Hello and Welcome</h2>
+                <p>My name is <strong>Micah Evans</strong>, and I am a student at the <em>University of Kentucky</em> in ICT 420.</p>
+                <p>Feel free to explore my work or visit the <a href="https://www.uky.edu" target="_blank">University of Kentucky website</a> to learn more about my school.</p>
             </section>
 
-            <section>
-                <header>
-                    <h2 class="section-title">Purpose of this website</h2>
-                    <ul>
-                        <li>Share some information about myself</li>
-                        <li>Develop my HTML coding skills</li>
-                        <li>Learn more about the semantic Web</li>
-                    </ul>
-                </header>
+            <section id="goals">
+                <h2 class="section-title">Purpose of This Website</h2>
+                <ul>
+                    <li>Share some information about myself</li>
+                    <li>Develop my HTML coding skills</li>
+                    <li>Learn more about the semantic Web</li>
+                </ul>
             </section>
 
             <aside id="meta-info">
-                <header>
-                    <h2>Notes</h2>
-                    <p>This website is created using HTML5</p>
-                </header>
+                <h2>Notes</h2>
+                <p>This website is created using semantic HTML5 elements to ensure high accessibility and SEO performance.</p>
             </aside> 
         </article>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Micah Evans | Built for ICT 420</p>
+    </footer>
 </body>
 </html>

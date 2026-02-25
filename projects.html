@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore current and past web development and photography projects by Micah Evans.">
     <title>Micah Evans | Projects</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,29 +11,42 @@
     <header id="main-header">
         <h1>My Projects</h1>
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">More Info</a> |
-            <a href="projects.html">Projects</a> |
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">More Info</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <article>
-            <section>
-                <header>
-                    <h2 class="section-title">Web Development Foundation</h2>
-                </header>
-                <p>This GitHub repository serves as a collection of my progress in ICT 420, starting from basic HTML semantics to CSS integration.</p>
-            </section>
+        <section>
+            <h2 class="section-title">Web Development Foundation</h2>
+            <p>This GitHub repository serves as a collection of my progress in ICT 420, starting from basic HTML semantics to CSS integration.</p>
+        </section>
 
-            <section>
-                <header>
-                    <h2 class="section-title">Automotive Gallery</h2>
-                </header>
-                <p>A project dedicated to capturing high-resolution imagery of rare vehicles.</p>
-                <img src="Media/project_placeholder.jpg" alt="Project Thumbnail">
-            </section>
-        </article>
+        <section>
+            <h2 class="section-title">Automotive Gallery</h2>
+            <p>A project dedicated to capturing high-resolution imagery of rare vehicles.</p>
+            <img src="Media/project_placeholder.jpg" alt="A preview thumbnail of the automotive gallery project">
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Project Inquiry</h2>
+            <form action="#" method="get">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Micah Evans</p>
+    </footer>
 </body>
 </html>
