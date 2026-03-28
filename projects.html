@@ -23,30 +23,48 @@
     </header>
 
     <main>
-        <section>
-            <h2 class="section-title">Web Development Foundation</h2>
-            <p>This GitHub repository serves as a collection of my progress in <code>ICT 420</code>, starting from basic HTML semantics to CSS integration.</p>
+        <section class="nested-flex-item">
+            <div class="nested-text">
+                <h2 class="section-title">Web Development Foundation</h2>
+                <p>This GitHub repository serves as a collection of my progress in <code>ICT 420</code>, starting from basic HTML semantics to CSS integration and Flexbox layouts.</p>
+            </div>
+            <div class="nested-image">
+                <img src="Media/project_placeholder.jpg" alt="Web development icon" class="styled-img">
+            </div>
         </section>
 
-        <section>
-            <h2 class="section-title">Automotive Gallery</h2>
-            <p>A project dedicated to capturing high-resolution imagery of rare vehicles, emphasizing <strong>high-performance engineering</strong> and <em>visual storytelling</em>.</p>
-            <img src="Media/project_placeholder.jpg" alt="A preview thumbnail of the automotive gallery project" class="styled-img">
+        <section class="nested-flex-item">
+            <div class="nested-text">
+                <h2 class="section-title">Automotive Gallery</h2>
+                <p>A project dedicated to capturing high-resolution imagery of rare vehicles, emphasizing <strong>high-performance engineering</strong> and <em>visual storytelling</em>.</p>
+            </div>
+            <div class="nested-image">
+                <img src="Media/project_placeholder.jpg" alt="A preview thumbnail of the automotive gallery project" class="styled-img">
+            </div>
         </section>
 
-        <section id="contact">
-            <h2 class="section-title">Project Inquiry</h2>
-            <p>If you would like to collaborate or have questions about my work, please use the form below.</p>
-            <form action="#" method="get" class="contact-form">
-                <label for="name"><strong>Name:</strong></label>
-                <input type="text" id="name" name="name" required placeholder="Your Name">
-                
-                <label for="email"><strong>Email:</strong></label>
-                <input type="email" id="email" name="email" required placeholder="Your Email">
-                
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </section>
+        <div class="flex-container">
+            <section id="contact" class="main-content">
+                <h2 class="section-title">Project Inquiry</h2>
+                <p>If you would like to collaborate, please use the form below.</p>
+                <form action="#" method="get" class="contact-form">
+                    <label for="name"><strong>Name:</strong></label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                    
+                    <label for="email"><strong>Email:</strong></label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+            
+            <aside class="sidebar">
+                <section>
+                    <h3>Contact Policy</h3>
+                    <p>I usually respond to all inquiries within 48 hours. Thank you for reaching out!</p>
+                </section>
+            </aside>
+        </div>
     </main>
 
     <footer>
