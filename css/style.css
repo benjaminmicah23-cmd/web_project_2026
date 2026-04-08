@@ -1,4 +1,9 @@
-/* 1. Font Families & Base Size */
+/* Student: Micah Evans
+   Course: ICT 420
+   Purpose: Comprehensive Stylesheet for Portfolio
+*/
+
+/* 1. TYPOGRAPHY & BASE STYLES */
 html {
     font-size: 100%; 
     font-family: Verdana, Geneva, sans-serif; 
@@ -8,12 +13,26 @@ html {
 body {
     background-color: #f0f2f5; 
     color: #333333;            
-    line-height: 1.6; 
+    line-height: 1.8; /* Improved readability */
     margin: 0;
     padding: 0;
 }
 
-/* 2. Header & Gradient */
+/* Global Font Settings */
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    letter-spacing: 1px; /* Precise typography selector */
+}
+
+p {
+    margin: 1rem 0;
+    font-size: 1rem; 
+    max-width: 75ch; /* Limit line length for readability */
+}
+
+/* 2. HEADER & NAVIGATION */
 #main-header {
     background: linear-gradient(135deg, #003366 0%, #001a33 100%);
     color: white;
@@ -23,258 +42,151 @@ body {
 }
 
 .header-container {
-    width: 85%;
+    width: 90%;
     max-width: 960px;
     margin: 0 auto;
-}
-
-/* 3. Hierarchy & Contrast */
-h1, h2, h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: 700;
-    margin-top: 1.5rem;
 }
 
 h1 {
     font-size: 2.5rem;
     text-transform: uppercase; 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin: 0 0 1rem 0;
     color: #ffdd00; 
 }
 
-h2 {
-    font-size: 1.8rem;
-    color: #003366;
-}
-
-.section-title {
-    color: #d14900;            
-    border-bottom: 2px solid #d14900;
-    padding-bottom: 0.3rem;
-    margin-bottom: 1.5rem;
-}
-
-/* 4. Layout and Line Properties */
-main {
-    width: 95%;
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 1rem;
-}
-
-section {
-    margin-bottom: 2.5rem;
-    padding: 1.5rem;
-    border-left: 5px solid #003366;
-    background-color: #fff;
-    transition: transform 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-section:hover {
-    transform: translateX(5px);
-}
-
-p {
-    margin: 1rem 0;
-    font-size: 1rem; 
-    max-width: 75ch; 
-}
-
-/* 5. Image & Figure Styling */
-.styled-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    display: block;
-    margin: 1rem 0;
-}
-
-.gallery-frame {
-    margin: 0;
-    padding: 10px;
-    background: #eee;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-figcaption {
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    color: #666;
-}
-
-/* 6. List Styling */
-.custom-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.custom-list li {
-    padding: 0.5rem 0 0.5rem 1.5rem;
-    position: relative;
-}
-
-.custom-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #d14900;
-    font-weight: bold;
-}
-
-/* 7. Code & Demo */
-code, .demo-child {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 0.9rem;
-}
-
-.demo-child {
-    box-sizing: border-box; 
-    width: 100%;
-    padding: 25px;
-    background-color: #ffdd00;
-    border: 8px solid #333;
-    font-weight: bold; 
-}
-
-/* 8. Navigation & Links */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+    display: flex; /* Flexbox for Nav */
+    justify-content: center;
+    gap: 20px;
 }
 
 nav a {
     color: #ffffff;            
     font-weight: bold;
     text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border 0.3s;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: #ffdd00;
-    border-bottom: 2px solid #ffdd00;
+    text-decoration: underline;
 }
 
-.text-link {
-    color: #d14900;
-    font-weight: bold;
+/* 3. BOX MODEL & LAYOUT (FLEXBOX) */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto;
 }
 
-/* 9. Forms & Tables */
-.contact-form {
+/* Two-column responsive layout without media queries */
+.flex-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; /* Allows wrapping on mobile */
+    gap: 30px;
+    align-items: flex-start;
 }
 
-.contact-form input {
-    margin-bottom: 1.2rem;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
+.main-content {
+    flex: 3 1 400px; /* Grows, shrinks, base width 400px */
+}
+
+.sidebar {
+    flex: 1 1 250px; /* Sidebar base 250px */
+    background-color: #eef2f7;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px dashed #003366; /* Required: dashed border style */
+}
+
+/* 4. SECTION STYLING */
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-left: 5px solid #003366;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.section-title {
+    color: #d14900;            
+    border-bottom: 2px solid #d14900;
+    padding-bottom: 0.5rem;
+}
+
+/* 5. IMAGES & FIGURES */
+.styled-img {
+    max-width: 100%;
+    height: auto;
     border-radius: 4px;
+    display: block;
 }
 
-.submit-btn {
-    background-color: #003366;
-    color: white;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
+.gallery-frame {
+    margin: 0;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
 }
 
-.submit-btn:hover {
-    background-color: #d14900;
+/* 6. NESTED FLEXBOX (Projects Page) */
+.nested-flex-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    background: white;
+    margin-bottom: 1.5rem;
 }
 
-.table-container {
-    overflow-x: auto; 
-}
+.nested-text { flex: 2 1 300px; }
+.nested-image { flex: 1 1 200px; }
 
+/* 7. TABLES & FORMS */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
 }
 
-th {
-    background-color: #003366;
-    color: white;
-}
-
 th, td {
     border: 1px solid #ccc;
-    padding: 12px;
-    text-align: left;
+    padding: 10px;
 }
 
-/* 10. Footer & Misc */
-.styled-quote {
-    border-left: 4px solid #ffdd00;
-    padding: 1rem 2rem;
-    background: #f9f9f9;
-    font-style: italic;
-    margin: 2rem 0;
+th { background: #003366; color: white; }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#meta-info {
-    background-color: #eef2f7;
-    padding: 1.5rem;
-    border-radius: 5px;
+.contact-form input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
 }
 
+.submit-btn {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-btn:hover { background-color: #d14900; }
+
+/* 8. FOOTER */
 footer {
     text-align: center;
-    padding: 3rem;
+    padding: 2rem;
     background: #1a1a1a;
     color: #aaa;
-    margin-top: 4rem;
-}
-
-/* 11. FLEXBOX LAYOUT (Two-Column & Nested) */
-
-/* Main Container - Two Columns */
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-/* Main Content Area */
-.main-content {
-    flex: 3 1 500px; /* Grows more, shrinks less, base 500px */
-}
-
-/* Sidebar Area */
-.sidebar {
-    flex: 1 1 250px; /* Takes up 1 part of space, base 250px */
-}
-
-/* Nested Flexbox - Project Items */
-.nested-flex-item {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-}
-
-.nested-text {
-    flex: 2 1 300px;
-}
-
-.nested-image {
-    flex: 1 1 200px;
+    margin-top: 3rem;
 }
